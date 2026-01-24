@@ -1,5 +1,5 @@
 /* ===========================
-   Custom Styles for PharmaMatic
+   Custom Styles for VendoPharmacy
    =========================== */
 
 /* Root Variables */
@@ -12,6 +12,8 @@
     --danger-color: #ef4444;
     --dark-color: #1f2937;
     --light-color: #f9fafb;
+    --purple-color: #9333ea;
+    --teal-color: #14b8a6;
 }
 
 /* Smooth Scrolling */
@@ -437,4 +439,159 @@ button:focus:not(:active)::after {
 
 .image-overlay:hover::after {
     opacity: 1;
+}
+/* ===========================
+   VendoPharmacy Specific Styles
+   =========================== */
+
+/* Singpass Badge */
+.singpass-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+}
+
+/* Tele-Pharmacy Indicator */
+.tele-pharmacy-active {
+    position: relative;
+}
+
+.tele-pharmacy-active::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background: #10b981;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+/* VendAI Glow Effect */
+.vendai-glow {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(147, 51, 234, 0.8);
+    }
+}
+
+/* POM Locker Badge */
+.pom-secure {
+    background: linear-gradient(135deg, #9333ea, #7c3aed);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Medicine Category Tags */
+.category-gsl {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.category-p {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.category-pom {
+    background: #f3e8ff;
+    color: #6b21a8;
+}
+
+/* Interactive Hover Cards */
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Partnership Badges */
+.partner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.partner-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 24/7 Badge */
+.badge-24-7 {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: inline-block;
+    animation: pulse-subtle 3s infinite;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Accessibility Focus Rings */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Mobile Responsive Adjustments for VendoPharmacy */
+@media (max-width: 768px) {
+    .partner-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .singpass-badge {
+        font-size: 0.625rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Print Styles for Prescriptions */
+@media print {
+    .pom-secure,
+    .category-pom {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
 }

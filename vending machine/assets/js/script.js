@@ -346,9 +346,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dynamic Year in Footer
     // ===========================
     const footerYear = document.querySelector('footer p');
-    if (footerYear && footerYear.textContent.includes('2025')) {
+    if (footerYear && footerYear.textContent.includes('2026')) {
         const currentYear = new Date().getFullYear();
-        footerYear.textContent = footerYear.textContent.replace('2025', currentYear);
+        if (currentYear > 2026) {
+            footerYear.textContent = footerYear.textContent.replace('2026', currentYear);
+        }
     }
     
     // ===========================
@@ -406,6 +408,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     console.log('PharmaMatic application loaded successfully!');
+    
+    // ===========================
+    // VendoPharmacy Specific Features
+    // ===========================
+    
+    // VendAI Assistant Button
+    const vendAIBtn = document.querySelector('button:has-text("Try VendAI Now")');
+    if (!vendAIBtn) {
+        const vendAIButtons = Array.from(document.querySelectorAll('button')).filter(btn => 
+            btn.textContent.includes('Try VendAI')
+        );
+        if (vendAIButtons.length > 0) {
+            vendAIButtons[0].addEventListener('click', function() {
+                showToast('VendAI Assistant: Please select your symptoms on the vending machine screen', 'success');
+                console.log('VendAI Assistant activated');
+            });
+        }
+    }
+    
+    // POM Locker Access Button
+    const pomLockerButtons = Array.from(document.querySelectorAll('button')).filter(btn => 
+        btn.textContent.includes('Access POM Locker')
+    );
+    if (pomLockerButtons.length > 0) {
+        pomLockerButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                showToast('Redirecting to Singpass verification...', 'success');
+                console.log('POM Locker access requested - Singpass verification needed');
+            });
+        });
+    }
+    
+    // Tele-Pharmacy Consult Buttons
+    const teleConsultBtns = Array.from(document.querySelectorAll('button')).filter(btn => 
+        btn.querySelector('i.fa-video')
+    );
+    
+    teleConsultBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const productCard = this.closest('.product-card');
+            const productName = productCard ? productCard.querySelector('h3').textContent : 'P Medicine';
+            
+            showToast(`Connecting you to a pharmacist for ${productName}...`, 'success');
+            
+            // Simulate video consultation
+            setTimeout(() => {
+                showToast('Pharmacist consultation session started', 'success');
+            }, 2000);
+            
+            console.log('Tele-pharmacy consultation requested for:', productName);
+        });
+    });
 });
 
 // ===========================

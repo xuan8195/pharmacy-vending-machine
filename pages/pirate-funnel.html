@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Funnel (AARRR) - Vendo Pharmacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/custom.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#D94A5C',
+                        'hover-red': '#C63D4D',
+                        'teal': '#5CBDB9',
+                        'bg-main': '#EBF6F5',
+                        'bg-highlight': '#FBE3E8',
+                        'text-primary': '#1F2937',
+                        'text-secondary': '#6B7280',
+                        'text-muted': '#9CA3AF',
+                        'border-gray': '#E5E7EB',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-main text-text-primary">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../logo.png" alt="Vendo Pharmacy Logo" class="w-10 h-10 object-contain">
+                        <span class="ml-2 text-xl font-bold text-text-primary">Vendo Pharmacy</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-text-secondary hover:text-teal">Home</a>
+                    <a href="introduction.html" class="text-text-secondary hover:text-teal">Introduction</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Business Model
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2">
+                            <a href="business-model.html#overview" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="business-model.html#value-proposition" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Value Proposition</a>
+                            <a href="business-model.html#strategies" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Strategies & Operation</a>
+                        </div>
+                    </div>
+                    
+                    <a href="swot.html" class="text-text-secondary hover:text-teal">SWOT Analysis</a>
+                    <a href="pirate-funnel.html" class="text-text-primary hover:text-teal font-medium nav-active">Pirate Funnel</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Marketing Plan
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="marketing.html#products" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Products</a>
+                            <a href="marketing.html#promotion" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Promotion</a>
+                            <a href="marketing.html#places" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Places</a>
+                        </div>
+                    </div>
+                    
+                    <a href="testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
+                    <a href="growth.html" class="text-text-secondary hover:text-teal">Growth Plan</a>
+                    <a href="reflection.html" class="text-text-secondary hover:text-teal">Reflection</a>
+                    <a href="vending-machine.html" class="bg-primary-red text-white px-4 py-2 rounded-lg hover:bg-hover-red font-medium ml-4">
+                        🛒 Buy Now
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-text-secondary hover:text-teal">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Home</a>
+                <a href="introduction.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Introduction</a>
+                <a href="business-model.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Business Model</a>
+                <a href="swot.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">SWOT Analysis</a>
+                <a href="pirate-funnel.html" class="block px-3 py-2 text-text-primary hover:bg-bg-main">Pirate Funnel</a>
+                <a href="marketing.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Marketing Plan</a>
+                <a href="testimonials.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Testimonials</a>
+                <a href="growth.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Growth Plan</a>
+                <a href="reflection.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Reflection</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-bg-main to-white py-16">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-text-primary mb-6">
+                    Pirate Funnel (AARRR)
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Our customer acquisition and retention strategy through Awareness, Acquisition, Activation, Retention, Revenue, and Referral
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funnel Overview -->
+    <section class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">The AARRR Framework</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto">
+                    A comprehensive approach to customer lifecycle management, from discovery to advocacy
+                </p>
+            </div>
+            
+            <!-- Funnel Visual -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('awareness').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">1. Awareness</div>
+                        <div class="text-purple-100">Reaching potential customers</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-lg text-center mx-8 transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('acquisition').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">2. Acquisition</div>
+                        <div class="text-blue-100">First-time user onboarding</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg text-center mx-16 transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('activation').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">3. Activation</div>
+                        <div class="text-green-100">First positive experience</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-6 rounded-lg text-center mx-24 transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('retention').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">4. Retention</div>
+                        <div class="text-yellow-100">Repeat usage and loyalty</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-primary-red to-hover-red text-white p-6 rounded-lg text-center mx-32 transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('revenue').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">5. Revenue</div>
+                        <div class="text-red-100">Monetization streams</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-teal to-teal/90 text-white p-6 rounded-lg text-center mx-40 transform hover:scale-105 transition-transform cursor-pointer" onclick="document.getElementById('referral').scrollIntoView({behavior: 'smooth'})">
+                        <div class="text-2xl font-bold mb-2">6. Referral</div>
+                        <div class="text-teal-100">Word-of-mouth growth</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Awareness -->
+    <section id="awareness" class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">1. Awareness</h2>
+                    <p class="text-text-secondary">Making Vendo Pharmacy visible to our target audience</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-purple-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                        High-traffic placement
+                    </h3>
+                    <p class="text-text-secondary">
+                        Deploy machines at MRT stations, hospitals, polyclinics-adjacent areas, and residential estates to maximise exposure.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-purple-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        Clear branding + value proposition
+                    </h3>
+                    <p class="text-text-secondary">
+                        Prominent signage (e.g., "24/7 access to medication", "Pharmacist support via tele-consult") to communicate safety and convenience quickly.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-purple-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Educational messaging
+                    </h3>
+                    <p class="text-text-secondary">
+                        Through launch-phase ambassadors, public education campaign and social media mass outreach to help reduce public unfamiliarity with vending-based pharmacy services and builds initial trust in the model.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-purple-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+                        </svg>
+                        Institutional credibility
+                    </h3>
+                    <p class="text-text-secondary">
+                        Collaboration with NUH/healthcare partners where staff inform suitable patients about vending-based collection options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Acquisition -->
+    <section id="acquisition" class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">2. Acquisition</h2>
+                    <p class="text-text-secondary">Converting awareness into first-time users</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Low-barrier onboarding
+                    </h3>
+                    <p class="text-text-secondary">
+                        First-time users are acquired through a low-barrier, intuitive step-by-step touchscreen journey that guides medication selection and verification reduces hesitation and complexity.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Trust through compliance
+                    </h3>
+                    <p class="text-text-secondary">
+                        Singpass verification for P and POM medicines reassures users that identity checks and safety standards are upheld.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                        </svg>
+                        Multiple payment
+                    </h3>
+                    <p class="text-text-secondary">
+                        QR code, cashless payment, cash remove financial friction and encourage trial use.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                        Entry products to encourage trial
+                    </h3>
+                    <p class="text-text-secondary">
+                        Promote popular, low-risk items and travel medication kits as easy first purchases.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        Convenience positioning
+                    </h3>
+                    <p class="text-text-secondary">
+                        Emphasise "no queues / no appointment" for working adults, caregivers, and after-hours needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Activation -->
+    <section id="activation" class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">3. Activation</h2>
+                    <p class="text-text-secondary">Delivering a positive first experience that creates value</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        Rapid Fulfillment Speed
+                    </h3>
+                    <p class="text-text-secondary">
+                        Designed to complete a transaction under 60 seconds, immediately demonstrating the time-saving advantage over traditional retail pharmacies.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Seamless Singpass Integration
+                    </h3>
+                    <p class="text-text-secondary">
+                        Singpass login enables secure identity confirmation and supports digital prescription checks (via EPS where applicable), reducing manual steps and friction.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+                        </svg>
+                        On-Demand Pharmacist Consultation
+                    </h3>
+                    <p class="text-text-secondary">
+                        One-tap Live Tele-consult provides real-time reassurance for P/POM decisions and ensures pharmacist-authorised dispensing.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        High reliability at the collection point
+                    </h3>
+                    <p class="text-text-secondary">
+                        Dispensing confirmation (e.g., drop detection sensors) reduces failed transactions and builds trust that the system works as intended.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Clear guidance for confident decisions
+                    </h3>
+                    <p class="text-text-secondary">
+                        VendAI guided Q&A helps users choose suitable low-risk products, flags red-flag symptoms, and escalates to pharmacist review when necessary.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Retention -->
+    <section id="retention" class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-yellow-500 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">4. Retention</h2>
+                    <p class="text-text-secondary">Building long-term engagement and repeat usage</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        Always-available convenience
+                    </h3>
+                    <p class="text-text-secondary">
+                        24/7 access drives long-term reliance encourages long-term reliance on the service due to high convenience.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        Reliability + stock confidence
+                    </h3>
+                    <p class="text-text-secondary">
+                        AI-driven inventory reduce frustration with strong inventory and uptime management.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Consistent safety standards
+                    </h3>
+                    <p class="text-text-secondary">
+                        Maintain trust via compliance, audit readiness, and pharmacist oversight.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Increase reliability
+                    </h3>
+                    <p class="text-text-secondary">
+                        Through remote monitoring, proactive servicing, fast incident resolution, ensure that our vending machine is running smoothly and safely.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+                        </svg>
+                        Marketing incentives
+                    </h3>
+                    <p class="text-text-secondary">
+                        Marketing incentives are deployed to encourage repeat usage and embed the vending pharmacy into patients' long-term care journeys.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Revenue -->
+    <section id="revenue" class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-primary-red rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">5. Revenue</h2>
+                    <p class="text-text-secondary">Diversified monetization streams</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                        </svg>
+                        Product Sale
+                    </h3>
+                    <p class="text-text-secondary">
+                        Revenue is generated through the sale of GSL, pharmacy-only (P), and eligible prescription-only (POM) medicines.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Consultation Fee
+                    </h3>
+                    <p class="text-text-secondary">
+                        Consultation with pharmacy for dispense of P or POM medication.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+                        </svg>
+                        Value Added Bundle
+                    </h3>
+                    <p class="text-text-secondary">
+                        Bundled products such as travel medication kits increase average transaction value.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        </svg>
+                        Partnership model
+                    </h3>
+                    <p class="text-text-secondary">
+                        Partnership with Hyphens Pharma ensures a stable supply chain and enables commission-based revenue sharing.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Automation
+                    </h3>
+                    <p class="text-text-secondary">
+                        Reduces manpower costs and improves inventory turnover, enhancing financial sustainability.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-primary-red mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Reduced wastage
+                    </h3>
+                    <p class="text-text-secondary">
+                        Reduction medication wastage and expiry further supports long-term profitability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Referral -->
+    <section id="referral" class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-8">
+                <div class="w-16 h-16 bg-teal rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary">6. Referral</h2>
+                    <p class="text-text-secondary">Turning satisfied users into advocates</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                        Word of mouth
+                    </h3>
+                    <p class="text-text-secondary">
+                        Caregivers recommend the service to family members managing regular medication needs. Working adults share the service as a time-saving alternative to physical pharmacies.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                        Partner enabled referrals
+                    </h3>
+                    <p class="text-text-secondary">
+                        Healthcare professionals contribute to referrals by informing and educating patients about vending-based collection options.
+                    </p>
+                </div>
+                
+                <div class="bg-bg-main rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                        User Trust
+                    </h3>
+                    <p class="text-text-secondary">
+                        Accurate dispensing, convenience to retrieve medication and pharmacist counselling strengthens word-of-mouth credibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-20 bg-gradient-to-br from-teal/10 via-white to-primary-red/5 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-teal/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-red/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-teal/30 rounded-full px-6 py-2.5 shadow-lg mb-6">
+                    <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text-primary font-semibold text-sm">Healthcare Doesn't Stop. Neither Do We.</span>
+                </div>
+                
+                <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                    Join Us in Transforming <br class="hidden sm:block"/>
+                    <span class="bg-gradient-to-r from-teal to-primary-red bg-clip-text text-transparent">Healthcare Access</span>
+                </h2>
+                
+                <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto mb-10">
+                    Experience safe, smart, and accessible pharmacy care anytime, anywhere through our pharmacy vending machines.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="vending-machine.html" 
+                   class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-red to-hover-red text-white rounded-xl font-bold text-lg shadow-xl shadow-primary-red/30 hover:shadow-2xl hover:shadow-primary-red/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-xl"></span>
+                    <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span class="relative z-10">Try Vending Machine</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+                
+                <a href="swot.html" 
+                   class="group inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-teal text-teal rounded-xl font-bold text-lg hover:bg-teal hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <span>Explore Our SWOT Analysis</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Vendo Pharmacy</h3>
+                    <p class="text-gray-300">
+                        Modernising pharmacy access through automated vending and tele-pharmacy services.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="introduction.html" class="text-gray-300 hover:text-teal">Introduction</a></li>
+                        <li><a href="business-model.html" class="text-gray-300 hover:text-teal">Business Model</a></li>
+                        <li><a href="swot.html" class="text-gray-300 hover:text-teal">SWOT Analysis</a></li>
+                        <li><a href="marketing.html" class="text-gray-300 hover:text-teal">Marketing Plan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <p class="text-gray-300">
+                        Email: info@vendopharmacy.sg<br>
+                        Phone: +65 6XXX XXXX<br>
+                        24/7 Support Available
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Vendo Pharmacy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Widget -->
+    <div class="fixed bottom-4 left-4 z-50">
+        <button id="chat-button" class="bg-teal hover:bg-teal/90 text-white rounded-full p-4 shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        
+        <div id="chat-widget" class="hidden absolute bottom-16 left-0 bg-white rounded-xl shadow-2xl w-80 overflow-hidden">
+            <div class="bg-teal text-white p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <span class="font-semibold">VendoBot Assistant</span>
+                </div>
+                <button id="chat-close" class="hover:bg-white/20 rounded p-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="h-64 overflow-y-auto p-4 bg-gray-50 custom-scrollbar"></div>
+            <div class="p-4 border-t">
+                <div class="flex space-x-2">
+                    <input id="chat-input" type="text" placeholder="Type your question..." class="flex-1 px-3 py-2 border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"/>
+                    <button id="chat-send" class="bg-teal hover:bg-teal/90 text-white px-4 py-2 rounded-lg">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+</html>

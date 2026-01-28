@@ -42,7 +42,20 @@
                 
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html" class="text-text-secondary hover:text-teal">Home</a>
-                    <a href="introduction.html" class="text-text-secondary hover:text-teal">Introduction</a>
+                    
+                    <!-- Introduction Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Introduction
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="introduction.html" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="introduction.html#partnerships" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Partnership</a>
+                        </div>
+                    </div>
                     
                     <div class="dropdown relative">
                         <button class="dropdown-button text-text-primary hover:text-teal font-medium flex items-center">
@@ -77,9 +90,25 @@
                     
                     <a href="testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
                     <a href="growth.html" class="text-text-secondary hover:text-teal">Growth Plan</a>
-                    <a href="reflection.html" class="text-text-secondary hover:text-teal">Reflection</a>
+                    
+                    <!-- Reflection Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Reflection
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                            <a href="reflection.html#yuhao" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Yuhao</a>
+                            <a href="reflection.html#collin" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Collin</a>
+                            <a href="reflection.html#olivia" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Olivia</a>
+                            <a href="reflection.html#michelle" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Michelle</a>
+                        </div>
+                    </div>
+                    
                     <a href="vending-machine.html" class="bg-primary-red text-white px-4 py-2 rounded-lg hover:bg-hover-red font-medium ml-4">
-                        🛒 Buy Now
+                        Products
                     </a>
                 </div>
                 
@@ -215,6 +244,7 @@
                     <p class="text-sm text-text-secondary mb-3">Singapore residents seeking convenient medication access for various needs</p>
                     <span class="text-teal text-xs font-medium">Click for details →</span>
                 </div>
+            
             </div>
         </div>
     </section>
@@ -296,16 +326,34 @@
                         <div class="w-12 h-12 bg-primary-red/10 rounded-lg flex items-center justify-center mr-4">
                             <svg class="w-6 h-6 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M11.3 1L1 10h6l-1 9 10.3-9h-6l1-9z" clip-rule="evenodd"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-text-primary">System Efficiency & Cost-Effectiveness</h3>
+                        <h3 class="text-xl font-bold text-text-primary">System Efficiency</h3>
                     </div>
                     <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
                             <span class="text-primary-red mr-2">•</span>
                             <span>Reduces hospital pharmacy congestion + supports manpower constraints</span>
                         </li>
+
+                    </ul>
+                </div>
+                
+
+                <!-- System Efficiency -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary-red/10 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary">Cost-Effectiveness</h3>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+        
                         <li class="flex items-start">
                             <span class="text-primary-red mr-2">•</span>
                             <span><strong>Market-aligned pricing with added convenience:</strong> Medications are priced on par with prevailing market rates, while Vendo Pharmacy provides 24/7 access and rapid dispensing at no additional cost to patients</span>
@@ -624,7 +672,7 @@
                     <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                     </svg>
-                    <span class="relative z-10">Try Vending Machine</span>
+                    <span class="relative z-10">Explore Our Products</span>
                     <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>

@@ -41,7 +41,20 @@
                 
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html" class="text-text-secondary hover:text-teal">Home</a>
-                    <a href="introduction.html" class="text-text-primary hover:text-teal font-medium">Introduction</a>
+                    
+                    <!-- Introduction Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-primary hover:text-teal font-medium flex items-center">
+                            Introduction
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="introduction.html" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="introduction.html#partnerships" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Partnership</a>
+                        </div>
+                    </div>
                     
                     <div class="dropdown relative">
                         <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
@@ -76,9 +89,25 @@
                     
                     <a href="testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
                     <a href="growth.html" class="text-text-secondary hover:text-teal">Growth Plan</a>
-                    <a href="reflection.html" class="text-text-secondary hover:text-teal">Reflection</a>
+                    
+                    <!-- Reflection Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Reflection
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                            <a href="reflection.html#yuhao" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Yuhao</a>
+                            <a href="reflection.html#collin" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Collin</a>
+                            <a href="reflection.html#olivia" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Olivia</a>
+                            <a href="reflection.html#michelle" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Michelle</a>
+                        </div>
+                    </div>
+                    
                     <a href="vending-machine.html" class="bg-primary-red text-white px-4 py-2 rounded-lg hover:bg-hover-red font-medium ml-4">
-                        🛒 Buy Now
+                        Products
                     </a>
                 </div>
                 
@@ -153,8 +182,61 @@
         </div>
     </section>
 
+    <!-- Key Partnerships Section -->
+    <section id="partnerships" class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <div class="inline-block bg-gradient-to-r from-teal/10 to-primary-red/10 rounded-full px-6 py-2 mb-4">
+                        <span class="text-teal font-semibold text-sm">COLLABORATIONS</span>
+                    </div>
+                    <h2 class="text-4xl font-bold text-text-primary mb-4">Key Partnerships</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">Strategic collaborations ensuring quality, safety, and reliability in medication access</p>
+                </div>
+
+                <!-- Partnership Cards -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- National University Hospital Card -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="bg-gradient-to-br from-teal/5 to-white p-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <img src="../images/introduction-image/NUH.jpg" alt="National University Hospital Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-3 text-center">National University Hospital (NUH)</h3>
+                            <div class="w-16 h-1 bg-teal mx-auto mb-6"></div>
+                            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-teal/20">
+                                <p class="text-sm font-semibold text-teal mb-2">Purpose:</p>
+                                <p class="text-text-secondary leading-relaxed">
+                                    National University Hospital (NUH) supports VendoPharmacy by providing extensive pharmacist support to enable a safe and clinically governed pathway for Pharmacy-only (P) and prescription-only medications (POM) through counselling. This strengthens patient confidence that VendoPharmacy prioritises clinical standards, not just convenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hyphens Pharma Card -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="bg-gradient-to-br from-primary-red/5 to-white p-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <img src="../images/introduction-image/Hyphens.jpg" alt="Hyphens Pharma Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-3 text-center">Hyphens Pharma</h3>
+                            <div class="w-16 h-1 bg-primary-red mx-auto mb-6"></div>
+                            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-primary-red/20">
+                                <p class="text-sm font-semibold text-primary-red mb-2">Purpose:</p>
+                                <p class="text-text-secondary leading-relaxed">
+                                    Hyphens Pharma supports VendoPharmacy by ensuring a reliable and safe medication supply across our machines. This helps minimise stock-outs, reduce wastage, and maintain medication quality, so users can trust that what they receive is legitimate and properly managed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works -->
-    <section class="py-16 bg-bg-main">
+    <section class="py-16 bg-white">
         <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-text-primary mb-4">How It Works</h2>
@@ -239,7 +321,7 @@
                     <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                     </svg>
-                    <span class="relative z-10">Try Vending Machine</span>
+                    <span class="relative z-10">Explore Our Products</span>
                     <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>

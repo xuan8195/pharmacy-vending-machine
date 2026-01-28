@@ -425,3 +425,134 @@ html, body {
     background-size: 1000px 100%;
     animation: shimmer 2s infinite;
 }
+
+/* Reflection Page Specific Styles */
+.reflection-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.reflection-hero {
+    padding: 4rem 0;
+}
+
+.reflection-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.reflection-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.8;
+}
+
+.reflection-section {
+    padding: 4rem 0;
+}
+
+.team-member-card {
+    margin-bottom: 3rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-header {
+    padding: 2.5rem;
+}
+
+.team-member-photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.team-member-name {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.team-member-role {
+    font-size: 1.5rem;
+    opacity: 0.95;
+}
+
+.team-member-school {
+    font-size: 1.125rem;
+    opacity: 0.85;
+    margin-top: 0.375rem;
+}
+
+.team-member-content {
+    padding: 2.5rem;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    line-height: 1.9;
+    padding: 1.5rem;
+}
+
+.section-heading {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+}
+
+.section-content {
+    margin-top: 1rem;
+}
+
+.section-list-item {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.bullet-point {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments for reflection page */
+@media (max-width: 768px) {
+    .reflection-title {
+        font-size: 2.5rem;
+    }
+    
+    .reflection-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .team-member-name {
+        font-size: 2rem;
+    }
+    
+    .team-member-role {
+        font-size: 1.25rem;
+    }
+    
+    .team-member-photo {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .section-heading {
+        font-size: 1.125rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    .section-list-item {
+        font-size: 0.9375rem;
+    }
+}

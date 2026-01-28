@@ -42,7 +42,20 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-text-primary hover:text-teal font-medium">Home</a>
-                    <a href="pages/introduction.html" class="text-text-secondary hover:text-teal">Introduction</a>
+                    
+                    <!-- Introduction Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Introduction
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="pages/introduction.html" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="pages/introduction.html#partnerships" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Partnership</a>
+                        </div>
+                    </div>
                     
                     <!-- Business Model Dropdown -->
                     <div class="dropdown relative">
@@ -79,9 +92,25 @@
                     
                     <a href="pages/testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
                     <a href="pages/growth.html" class="text-text-secondary hover:text-teal">Growth Plan</a>
-                    <a href="pages/reflection.html" class="text-text-secondary hover:text-teal">Reflection</a>
+                    
+                    <!-- Reflection Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Reflection
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                            <a href="pages/reflection.html#yuhao" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Yuhao</a>
+                            <a href="pages/reflection.html#collin" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Collin</a>
+                            <a href="pages/reflection.html#olivia" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Olivia</a>
+                            <a href="pages/reflection.html#michelle" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Michelle</a>
+                        </div>
+                    </div>
+                    
                     <a href="pages/vending-machine.html" class="bg-primary-red text-white px-4 py-2 rounded-lg hover:bg-hover-red font-medium ml-4">
-                        🛒 Buy Now
+                        🛒Products
                     </a>
                 </div>
                 
@@ -108,7 +137,7 @@
                 <a href="pages/testimonials.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Testimonials</a>
                 <a href="pages/growth.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Growth Plan</a>
                 <a href="pages/reflection.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Reflection</a>
-                <a href="pages/vending-machine.html" class="block px-3 py-2 bg-primary-red text-white hover:bg-hover-red rounded mx-3 text-center font-medium">🛒 Buy Now</a>
+                <a href="pages/vending-machine.html" class="block px-3 py-2 bg-primary-red text-white hover:bg-hover-red rounded mx-3 text-center font-medium">Products</a>
             </div>
         </div>
     </nav>
@@ -129,7 +158,7 @@
         <!-- Content Container -->
         <div class="w-full px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-20">
             <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-[1.2fr,1fr] gap-12 lg:gap-20 items-center">
+                <div class="grid lg:grid-cols-[1.5fr,1fr] gap-12 lg:gap-16 items-center">
                     
                     <!-- Left Content -->
                     <div class="space-y-8 lg:space-y-10">
@@ -144,8 +173,8 @@
                         <!-- Hero Headline -->
                         <div class="space-y-4">
                             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                                <span class="block text-text-primary mb-2">Our Medicine,</span>
-                                <span class="block bg-gradient-to-r from-primary-red via-primary-red to-hover-red bg-clip-text text-transparent">Your Convenience</span>
+                                <span class="block text-text-primary mb-2">Vendo</span>
+                                <span class="block bg-gradient-to-r from-primary-red via-primary-red to-hover-red bg-clip-text text-transparent">Pharmacy</span>
                             </h1>
                             
                             <!-- Animated underline -->
@@ -154,22 +183,11 @@
                         
                         <!-- Subheadline -->
                         <p class="text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed max-w-2xl">
-                            Experience the future of pharmacy with our automated vending machines, featuring 
-                            <span class="relative inline-block">
-                                <span class="relative z-10 text-teal font-bold">24/7 tele-pharmacy counselling</span>
-                                <span class="absolute bottom-1 left-0 w-full h-3 bg-teal/20 -rotate-1"></span>
-                            </span>
-                            and instant medication access.
+                            Our Medicine, Your Convenience
+                    
                         </p>
                         
-                        <!-- Key Stats -->
-                        <div class="grid grid-cols-3 gap-4 sm:gap-6 py-6">
-                            <div class="text-center group">
-                                <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-teal mb-2 group-hover:scale-110 transition-transform">24/7</div>
-                                <div class="text-xs sm:text-sm text-text-secondary font-medium">Always Available</div>
-                            </div>
-                     
-                        </div>
+                        
                         
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-4">
@@ -179,7 +197,7 @@
                                 <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                                 </svg>
-                                <span class="relative z-10">Try Vending Machine</span>
+                                <span class="relative z-10">Explore Our Products</span>
                                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                                 </svg>
@@ -213,13 +231,13 @@
                             <!-- Main image container with enhanced effects -->
                             <div class="relative group">
                                 <!-- Glow effect -->
-                                <div class="absolute -inset-4 bg-gradient-to-r from-teal/30 via-primary-red/20 to-teal/30 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="absolute -inset-4 bg-gradient-to-r from-teal/20 via-primary-red/10 to-teal/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
                                 
                                 <!-- Image -->
-                                <div class="relative bg-white/50 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+                                <div class="relative bg-white/40 backdrop-blur-sm p-6 rounded-3xl shadow-2xl max-w-md mx-auto">
                                     <img src="logo.png" 
                                          alt="Vendo Pharmacy Vending Machine" 
-                                         class="w-full h-auto object-contain rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
+                                         class="w-full h-auto object-contain rounded-2xl transform group-hover:scale-[1.00] transition-transform duration-500" 
                                          onerror="this.src='images/vending-machine.png'">
                                 </div>
                             </div>

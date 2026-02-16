@@ -25,6 +25,7 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-bg-main text-text-primary">
     
@@ -45,7 +46,7 @@
                     <!-- Introduction Dropdown -->
                     <div class="dropdown relative">
                         <button class="dropdown-button text-text-primary hover:text-teal font-medium flex items-center">
-                            Introduction
+                            About Us
                             <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
@@ -53,12 +54,13 @@
                         <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
                             <a href="introduction.html" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
                             <a href="introduction.html#partnerships" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Partnership</a>
+                            <a href="introduction.html#growth" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Growth Plan</a>
                         </div>
                     </div>
                     
                     <div class="dropdown relative">
                         <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
-                            Business Model
+                            Services
                             <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
@@ -69,27 +71,26 @@
                             <a href="business-model.html#strategies" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Strategies & Operation</a>
                         </div>
                     </div>
-                    
-                    <a href="swot.html" class="text-text-secondary hover:text-teal">SWOT Analysis</a>
-                    <a href="pirate-funnel.html" class="text-text-secondary hover:text-teal">Pirate Funnel</a>
-                    
+
                     <div class="dropdown relative">
                         <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
-                            Marketing Plan
+                            Price & Promotion
                             <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
                         </button>
                         <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-                            <a href="marketing.html#products" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Products</a>
                             <a href="marketing.html#price" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Price</a>
                             <a href="marketing.html#promotion" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Promotion</a>
-                            <a href="marketing.html#places" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Places</a>
                         </div>
                     </div>
                     
+                    <a href="swot.html" class="text-text-secondary hover:text-teal">SWOT Analysis</a>
+                    <a href="pirate-funnel.html" class="text-text-secondary hover:text-teal">Pirate Funnel</a>
+                    
+
+                    
                     <a href="testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
-                    <a href="growth.html" class="text-text-secondary hover:text-teal">Growth Plan</a>
                     
                     <!-- Reflection Dropdown -->
                     <div class="dropdown relative">
@@ -132,7 +133,6 @@
                 <a href="pirate-funnel.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Pirate Funnel</a>
                 <a href="marketing.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Marketing Plan</a>
                 <a href="testimonials.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Testimonials</a>
-                <a href="growth.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Growth Plan</a>
                 <a href="reflection.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Reflection</a>
             </div>
         </div>
@@ -159,7 +159,7 @@
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold text-text-primary mb-12 text-center">What is Vendo Pharmacy?</h2>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="grid md:grid-cols-1 gap-12 items-center mb-16">
                     <div>
                         <div class="bg-gradient-to-br from-teal/5 to-primary-red/5 rounded-2xl p-8 border border-teal/20">
                             <p class="text-lg text-text-secondary leading-relaxed mb-6">
@@ -168,15 +168,6 @@
                             <p class="text-lg text-text-secondary leading-relaxed">
                                 Vendo Pharmacy is led by the pharmacy owner and supported by an in-house pharmacist who oversees governance, smart vending, lockers, and case escalation. A support team ensures compliance and process improvements, while delivery staff handle secure stock replenishment. To enhance continuity of care and patient trust, we partner with <span class="font-semibold text-primary-red">National University Hospital (NUH)</span> and <span class="font-semibold text-primary-red">Hyphens Pharma</span> to strengthen healthcare linkage and inventory support, ensuring safe, timely and reliable patient access to a dependable medication supply ecosystem.
                             </p>
-                        </div>
-                    </div>
-                    
-                    <div class="relative">
-                        <div class="relative group">
-                            <div class="absolute -inset-4 bg-gradient-to-r from-teal/20 via-primary-red/10 to-teal/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                            <div class="relative bg-white p-4 rounded-2xl shadow-xl">
-                                <img src="../images/intro-diagram.jpg" alt="Vendo Pharmacy Partnership Diagram" class="w-full h-auto rounded-xl object-contain">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,7 +233,7 @@
         <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-text-primary mb-4">How It Works</h2>
-                <p class="text-text-secondary">Purchasing a medication: Simple, secure, and convenient medication access in 4 easy steps</p>
+                <h3 class="text-3xl text-text-primary mb-4">Purchasing a medication: Simple, secure, and convenient medication access in 4 easy steps</h3>
             </div>
             
             <div class="grid md:grid-cols-4 gap-8">
@@ -296,7 +287,7 @@
         <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
     
-                <p class="text-text-secondary">Accessing a Secure Locker: Simple, secure, and convenient medication access in 4 easy steps</p>
+                <h3 class="text-3xl text-text-primary mb-4">Accessing a Secure Locker: Simple, secure, and convenient medication access in 4 easy steps</h3>
             </div>
             
             <div class="grid md:grid-cols-4 gap-8">
@@ -339,6 +330,431 @@
                     <h3 class="text-lg font-bold text-text-primary mb-2">Pay & collect</h3>
                     <p class="text-text-secondary text-sm">
                         Complete payment and collect your medication. A dispensing record will be stored
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Revenue Model -->
+            <div class="max-w-6xl mx-auto mb-12">
+                <h3 class="text-2xl font-bold text-text-primary mb-8 text-center">Revenue Model</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Medication Sales</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• 24/7 sales of General Sale products including high-turnover OTC items and travel medication kits</li>
+                                    <li>• 24/7 Pharmacy-only product after Singpass verification and real-time tele-counselling.</li>
+                                    <li>• 24/7 Prescription-only locker collection after Singpass verification, valid e-prescription from NUH and real-time tele-counselling.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Tele-Pharmacy & Consultation Fees</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Patients purchasing P or POM items are charged a small professional fee for real-time video counselling with registered pharmacists</li>
+                                    <li>• Higher consultation fees can be applied during peak periods or extended hours, reflecting the value of reduced waiting time and accessibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Commission-Based Partnership Model</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Medications are supplied directly from Hyphens, with profits shared via a commission-based model, reducing procurement costs while scaling sales volume efficiently</li>
+                                    <li>• Acts as an extended dispensing arm for NUH, supporting patient medication collection, generating service and dispensing revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Value-Added Bundles & Upselling</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• AI-supported inventory analysis ensures fast-moving, high-margin items are prioritized, improving overall revenue per machine</li>
+                                    <li>• By recommending only clinically appropriate add-ons (with a clear “why”), patients are more likely to buy a complete self-care set in one transaction (e.g., ORS + antidiarrhoeal advice, thermometer + fever meds), which increases average basket size while staying ethical</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20 ">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">AI-Driven Cost Efficiency & Wastage Reduction</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• AI-based demand forecasting optimises replenishment cycles and stock allocation, reducing overstocking and emergency restocking costs</li>
+                                    <li>• Smarter inventory rotation (e.g., FEFO) minimises medication expiry and wastage, protecting margins and improving overall profitability per machine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Higher Profitability via Lower Operating Cost (Margin Expansion)</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Centralised pharmacist coverage + standardised workflows lets one team support many machines, reducing per-site manpower cost while maintaining professional oversight</li>
+                                    <li>• Remote monitoring + forecast-driven replenishment reduces downtime, emergency restocking, and losses from expiry, improving gross margin per machine (same sales, lower cost base)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+        
+                </div>
+
+                
+
+                <!-- Revenue Target -->
+                <div class="bg-gradient-to-br from-teal/10 to-primary-red/10 rounded-2xl p-8 border-2 border-teal/30">
+                    <h4 class="text-xl font-bold text-text-primary mb-6 text-center">Our Revenue Target</h4>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <!-- Revenue Distribution Chart -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h5 class="text-lg font-bold text-text-primary mb-6 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                </svg>
+                                Revenue Distribution
+                            </h5>
+                            <div class="flex justify-center items-center">
+                                <div style="width: 280px; height: 280px;">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="mt-6 space-y-2">
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #5CBDB9;"></div>
+                                        <span class="text-text-secondary">Medication Sales</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">46.2%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #7ECCC8;"></div>
+                                        <span class="text-text-secondary">Tele-Pharmacy Consultation</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">30.8%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #A1DDD9;"></div>
+                                        <span class="text-text-secondary">Value-Added Bundles</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">23.1%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-secondary text-lg leading-relaxed">
+                                Our revenue targets are designed to achieve a more balanced mix across our product and service offerings. This positions VendoPharmacy to scale towards a revenue profile more comparable to established retail pharmacy chains.
+                            </p>
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-teal rounded mr-3"></div>
+                                    <span class="text-text-secondary"><strong>Medication Sales:</strong> 46.2% (~S$462,000)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded mr-3" style="background-color: #7ECCC8;"></div>
+                                    <span class="text-text-secondary"><strong>Tele-pharmacy:</strong> 30.8% (~S$308,000)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded mr-3" style="background-color: #A1DDD9;"></div>
+                                    <span class="text-text-secondary"><strong>Bundles & Upselling:</strong> 23.1% (~S$231,000)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Plan Section -->
+    <!-- Timeline Section -->
+    <section id="growth" class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-text-primary mb-4">Future Growth Plans</h2>
+                <p class="text-lg text-text-secondary">How will the business evolve in the future?</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-teal"></div>
+
+                <!-- Phase 1: Service Expansion + Targets -->
+                <div class="mb-16 flex flex-col md:flex-row items-stretch gap-8">
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-green-100 rounded-lg p-8 shadow-md border-2 border-green-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center">Service Expansion</h3>
+                            <div class="mt-6 text-left space-y-4">
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Community Health Support</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Expand into community health support (e.g., BP kiosks, wellness checks, seasonal campaigns).</li>
+                                        <li>Deploy self-service kiosks with automated interpretation and referral prompts.
+                                            <ul class="ml-4 list-circle mt-1">
+                                                <li>If abnormal readings are detected, the system triggers referral prompts (e.g., "Please consult a GP" or book appointment with partner clinic).</li>
+                                            </ul>
+                                        </li>
+                                        <li>Run quarterly health campaigns with digital education and QR resources.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Repeat-Medication Locker Collection to Enhance Adherence</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Secure integration with hospitals/polyclinics.
+                                            <ul class="ml-4 list-circle mt-1">
+                                                <li>Prescription data is digitally linked to the locker system. Once medication is prepared, patients receive SMS/app reminders when it is ready for collection.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p class="font-semibold text-text-primary mt-2 mb-1 text-sm">Missed-collection alerts + pharmacist follow-up</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>If medication is not collected within 48 hours, the system automatically triggers an SMS reminder.</li>
+                                        <li>If still uncollected after 72 hours, a second reminder is sent and flagged in the dashboard.</li>
+                                        <li>After 5 days, high-risk patients are escalated for pharmacist review to check on adherence, side effects, or barriers to collection.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Travel Health Expansion</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>AI-curated destination kits.
+                                            <ul class="ml-4 list-circle mt-1">
+                                                <li>The system suggests tailored bundles based on travel destination. Prompts may include mosquito protection, GI medications, altitude support, or vaccine reminders.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Embed short digital counselling before purchase to ensure appropriate product selection and safe self-care.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-center md:w-2/12">
+                        <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white">
+                            1
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-yellow-100 rounded-lg p-8 shadow-md border-2 border-yellow-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center mb-6">Targets</h3>
+                            <ul class="text-text-secondary text-sm space-y-2 list-disc ml-4">
+                                <li>Install BP kiosks at pilot sites within 6 months; achieve ≥20% referral rate within 12 months</li>
+                                <li>Onboard first hospital partner within 6 months; reduce missed pickups by ≥25% within 12 months</li>
+                                <li>Launch ≥5 travel bundles within 9 months; increase basket size by ≥20% within 12 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Targets + Deeper Technology Adoption -->
+                <div class="mb-16 flex flex-col md:flex-row items-stretch gap-8">
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-yellow-100 rounded-lg p-8 shadow-md border-2 border-yellow-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center mb-6">Targets</h3>
+                            <ul class="text-text-secondary text-sm space-y-2 list-disc ml-4">
+                                <li>Implement 100% red-flag triage across machines within 6 months</li>
+                                <li>Achieve ≥95% machine uptime within 12 months; reduce breakdowns by ≥40% within 18 months</li>
+                                <li>Ensure 100% encrypted, time-stamped prescription logs within 6 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-center md:w-2/12">
+                        <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white">
+                            2
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-green-100 rounded-lg p-8 shadow-md border-2 border-green-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center">Deeper Technology Adoption</h3>
+                            <div class="mt-6 text-left space-y-4">
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">VendAI Enhancement</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Enhance VendAI into a structured guided self-care pathway.</li>
+                                        <li>Embed red-flag triage and tele-pharmacist escalation.</li>
+                                        <li>Standardise counselling prompts for safe, consistent advice.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Predictive Maintenance and Uptime</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Improve predictive maintenance and uptime.</li>
+                                        <li>Use IoT diagnostics and AI analytics for early fault detection.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Data Security and Traceability</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Strengthen data security and traceability.</li>
+                                        <li>Implement encrypted logs, digital signatures, audit trails, and PDPA-aligned access controls.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Partnerships & Scaling + Targets -->
+                <div class="mb-16 flex flex-col md:flex-row items-stretch gap-8">
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-green-100 rounded-lg p-8 shadow-md border-2 border-green-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center">Partnerships & Scaling</h3>
+                            <div class="mt-6 text-left space-y-4">
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Healthcare Partnerships</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Expand collaborations with polyclinics, GPs, and hospitals.</li>
+                                    </ul>
+                                    <p class="font-semibold text-text-primary mt-2 mb-1 text-sm">Locker Collection During Consultation</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Offer locker-based medication collection as an alternative to pharmacy queues.</li>
+                                        <li>Digital prescription transfer + SMS notification for convenient pickup.</li>
+                                    </ul>
+                                    <p class="font-semibold text-text-primary mt-2 mb-1 text-sm">Adherence Programmes</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Co-develop adherence programmes.</li>
+                                        <li>Enrol chronic patients (e.g., diabetes, hypertension) into structured refill reminder systems.</li>
+                                        <li>Trigger pharmacist follow-up for missed pickups or high-risk patients.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Supplier Partnerships</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Grow supplier partnerships.</li>
+                                        <li>Strengthen supplier partnerships (e.g., manufacturers and wholesalers) through volume-based contracts and shared inventory dashboards with FEFO tracking to improve cost efficiency and reduce wastage.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Deployment Strategy</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Deploy machines in clusters.</li>
+                                        <li>Deploy machines in high-demand clusters (e.g., dense housing estates, transport nodes, hospital-adjacent sites) using demand heat-mapping to optimise utilisation and logistics efficiency.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-center md:w-2/12">
+                        <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white">
+                            3
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-yellow-100 rounded-lg p-8 shadow-md border-2 border-yellow-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center mb-6">Targets</h3>
+                            <ul class="text-text-secondary text-sm space-y-2 list-disc ml-4">
+                                <li>Onboard ≥10 institutional partners within 24 months</li>
+                                <li>Reduce procurement costs by 5–10% within 18 months</li>
+                                <li>Deploy in ≥3 clusters within 12 months; increase utilisation by ≥25% within 18 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4: Targets + Sustainability Plan -->
+                <div class="flex flex-col md:flex-row items-stretch gap-8">
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-yellow-100 rounded-lg p-8 shadow-md border-2 border-yellow-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center mb-6">Targets</h3>
+                            <ul class="text-text-secondary text-sm space-y-2 list-disc ml-4">
+                                <li>Reduce expiry losses by ≥30% within 18 months</li>
+                                <li>Cut logistics fuel use by ≥15% within 12 months</li>
+                                <li>Reduce energy usage per machine by ≥20% within 24 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center justify-center md:w-2/12">
+                        <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white">
+                            4
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 flex items-center">
+                        <div class="w-full bg-green-100 rounded-lg p-8 shadow-md border-2 border-green-200 min-h-[200px] flex flex-col">
+                            <h3 class="text-2xl font-bold text-text-primary text-center">Sustainability Plan</h3>
+                            <div class="mt-6 text-left space-y-4">
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Reduce Wastage and Carbon Footprint</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Reduce wastage and carbon footprint.</li>
+                                        <li>Use AI forecasting with FEFO and structured pharmaceutical waste channels.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-text-primary mb-2">Lower Operational Emissions</p>
+                                    <ul class="text-text-secondary text-sm space-y-1 ml-4 list-disc">
+                                        <li>Lower operational emissions.</li>
+                                        <li>Optimise refill logistics and adopt energy-efficient, smart temperature-controlled machines.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion and Future Growth Plans -->
+    <section class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Conclusion and Future Growth Plans</h2>
+                <p class="text-text-secondary">Summary of key takeaways from our business model</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+                <div class="prose max-w-none">
+                    <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                        VendoPharmacy modernises medication access by combining 24/7 automated dispensing, secure pharmacist-controlled POM lockers, and real-time NUH telepharmacy counselling. Supported by Singpass + EPS verification, a robust quality assurance framework, and VendAI decision support, our model delivers medication access that is convenient, compliant, and patient-centred.
+                    </p>
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        This is made possible through strategic partnerships with NUH, which safeguards clinical decision-making through pharmacist oversight, and Hyphens Pharma, which ensures a reliable and consistent supply chain. Together, these collaborations enable VendoPharmacy to reduce waiting times, ease hospital pharmacy load, and strengthen continuity of care for patients.
                     </p>
                 </div>
             </div>
@@ -474,5 +890,6 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/chatbot.js"></script>
+    <script src="../js/chart-config.js"></script>
 </body>
 </html>

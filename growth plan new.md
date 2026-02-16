@@ -1,76 +1,28 @@
-1) Service Expansion
-Community Health Support
-•	Expand into community health support (e.g., BP kiosks, wellness checks, seasonal campaigns).
-•	Deploy self-service kiosks with automated interpretation and referral prompts.
-o	If abnormal readings are detected, the system triggers referral prompts (e.g., “Please consult a GP” or book appointment with partner clinic).
-•	Run quarterly health campaigns with digital education and QR resources.
-Repeat-Medication Locker Collection to Enhance Adherence
-•	Secure integration with hospitals/polyclinics.
-o	Prescription data is digitally linked to the locker system. Once medication is prepared, patients receive SMS/app reminders when it is ready for collection.
-Missed-collection alerts + pharmacist follow-up
-•	If medication is not collected within 48 hours, the system automatically triggers an SMS reminder.
-•	If still uncollected after 72 hours, a second reminder is sent and flagged in the dashboard.
-•	After 5 days, high-risk patients are escalated for pharmacist review to check on adherence, side effects, or barriers to collection.
-Travel Health Expansion
-•	AI-curated destination kits.
-o	The system suggests tailored bundles based on travel destination. Prompts may include mosquito protection, GI medications, altitude support, or vaccine reminders.
-•	Embed short digital counselling before purchase to ensure appropriate product selection and safe self-care.
+Expanding Our Services
+More than just medication collection. 
+•	In the future, we plan to introduce simple community health support features such as blood pressure monitoring kiosks, basic wellness checks, and seasonal health campaigns. These services are designed to help you stay on top of your health in a convenient and accessible way.
+•	We’re also working with healthcare institutions to make repeat prescription collection even smoother, helping patients stay consistent with their medications and avoid missed refills.
+•	For travellers, we aim to expand our travel health offerings with more destination-specific kits and easy-to-understand health guidance — so you can travel prepared and with peace of mind.
 
-Targets
-•	Install BP kiosks at pilot sites within 6 months; achieve ≥20% referral rate within 12 months
-•	Onboard first hospital partner within 6 months; reduce missed pickups by ≥25% within 12 months
-•	Launch ≥5 travel bundles within 9 months; increase basket size by ≥20% within 12 months
-________________________________________
-2) Deeper Technology Adoption
-VendAI Enhancement
-•	Enhance VendAI into a structured guided self-care pathway.
-•	Embed red-flag triage and tele-pharmacist escalation.
-•	Standardise counselling prompts for safe, consistent advice.
-Predictive Maintenance and Uptime
-•	Improve predictive maintenance and uptime.
-•	Use IoT diagnostics and AI analytics for early fault detection.
-Data Security and Traceability
-•	Strengthen data security and traceability.
-•	Implement encrypted logs, digital signatures, audit trails, and PDPA-aligned access controls.
+Smarter, Safer Technology
+Technology that supports — not replaces — care.
+•	We’re continuously improving VendAI to provide clearer guidance when selecting medications. This means better prompts, clearer safety alerts, and stronger encouragement to speak to a pharmacist when needed.
+•	Behind the scenes, we’re strengthening our systems to reduce downtime, so machines remain reliable and available when you need them.
+•	We’re also enhancing secure data handling and prescription traceability to ensure your information remains protected and responsibly managed at all times.
 
-Targets
-•	Implement 100% red-flag triage across machines within 6 months
-•	Achieve ≥95% machine uptime within 12 months; reduce breakdowns by ≥40% within 18 months
-•	Ensure 100% encrypted, time-stamped prescription logs within 6 months
-________________________________________
-3) Partnerships & Scaling
-Healthcare Partnerships
-•	Expand collaborations with polyclinics, GPs, and hospitals.
-Locker Collection During Consultation
-•	Offer locker-based medication collection as an alternative to pharmacy queues.
-•	Digital prescription transfer + SMS notification for convenient pickup.
-Adherence Programmes
-•	Co-develop adherence programmes.
-•	Enrol chronic patients (e.g., diabetes, hypertension) into structured refill reminder systems.
-•	Trigger pharmacist follow-up for missed pickups or high-risk patients.
-Supplier Partnerships
-•	Grow supplier partnerships.
-•	Strengthen supplier partnerships (e.g., manufacturers and wholesalers) through volume-based contracts and shared inventory dashboards with FEFO tracking to improve cost efficiency and reduce wastage.
-Deployment Strategy
-•	Deploy machines in clusters.
-•	Deploy machines in high-demand clusters (e.g., dense housing estates, transport nodes, hospital-adjacent sites) using demand heat-mapping to optimise utilisation and logistics efficiency.
+Growing Our Network
+Bringing convenience closer to you.
+•	We plan to work with more polyclinics, GP clinics, and hospitals to make prescription collection more accessible across Singapore. This means more locations where you can collect your medications easily and securely.
+•	At the same time, we’re strengthening partnerships with trusted suppliers to maintain stable medication supply and fair pricing.
+•	As we expand, we’ll roll out machines strategically in high-demand areas such as residential estates, transport hubs, and near hospitals — so help is always within reach.
 
-Targets
-•	Onboard ≥10 institutional partners within 24 months
-•	Reduce procurement costs by 5–10% within 18 months
-•	Deploy in ≥3 clusters within 12 months; increase utilisation by ≥25% within 18 months
-________________________________________
-4) Sustainability Plan
-Reduce Wastage and Carbon Footprint
-•	Reduce wastage and carbon footprint.
-•	Use AI forecasting with FEFO and structured pharmaceutical waste channels.
-Lower Operational Emissions
-•	Lower operational emissions.
-•	Optimise refill logistics and adopt energy-efficient, smart temperature-controlled machines.
+Sustainable & Responsible Growth
+Caring for your health — and the environment.
+•	We are committed to reducing medication wastage by improving demand forecasting and ensuring medicines are dispensed within safe usage timelines. Where needed, we work with partners to safely dispose of unsuitable or near-expiry stock in a compliant manner.
+•	Our expansion will also focus on clustered deployment and optimised refill routes to reduce unnecessary transport. Combined with energy-efficient machines, this helps lower our overall environmental footprint while keeping services reliable.
 
-Targets
-•	Reduce expiry losses by ≥30% within 18 months
-•	Cut logistics fuel use by ≥15% within 12 months
-•	Reduce energy usage per machine by ≥20% within 24 months
 
-![alt text](image-1.png) - this picture shows how i want to arrange the information
+Targets: 
+As we grow, our focus remains on making healthcare more accessible, reliable, and sustainable for everyone. We plan to introduce community health support features and expand our travel health bundles, while working closely with partners to reduce missed prescription pickups by at least 25%. At the same time, we are strengthening safety checks and secure prescription handling to maintain over 95% machine reliability, so you can depend on us whenever you need care. We are also committed to reducing medication wastage and improving energy efficiency — caring for both your health and the environment.
+
+![alt text](image-3.png) - this picture shows how i want my growhth plan to be like

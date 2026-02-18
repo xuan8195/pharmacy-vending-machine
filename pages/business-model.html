@@ -162,6 +162,19 @@
             
             <!-- Service Cards Grid -->
             <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+                <!-- Medication sales -->
+                <div class="bg-gradient-to-br from-primary-red/5 to-white border-2 border-primary-red/20 rounded-xl p-6 card-hover cursor-pointer" onclick="openModal('modal-medications-sale')">
+                    <div class="w-12 h-12 bg-primary-red rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Medication Sales</h3>
+                    <p class="text-sm text-text-secondary mb-3">Smart medication dispensing with built-in pharmacist oversight for GSL, P, and POM medications</p>
+                    <span class="text-primary-red text-xs font-medium">Click for details →</span>
+                </div>
+
                 <!-- VendAI Assistant -->
                 <div class="bg-gradient-to-br from-teal/5 to-white border-2 border-teal/20 rounded-xl p-6 card-hover cursor-pointer" onclick="openModal('modal-vendai')">
                     <div class="w-12 h-12 bg-teal rounded-lg flex items-center justify-center mb-4">
@@ -487,7 +500,7 @@
                     <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
                             <span class="text-teal mr-2">•</span>
-                            <span><strong>Care that fits your life</strong> <br> Vendo Pharmacy is available 24/7 at convenient locations. Collect your medications in just minutes from our secure machines and lockers — no queues, no rushing.</span>
+                            <span><strong>Care that fits your life</strong> <br> Vendo Pharmacy is available 24/7 at convenient locations. Collect your medications in just minutes from our secure machines and lockers - no queues, no rushing.</span>
                 </div>
 
                 <!-- Personalized Care -->
@@ -598,7 +611,7 @@
                                     <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
                                     <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
                                 </svg>
-                                <span><strong>Every 2 days:</strong> Delivery of POM medications to collection lockers</span>
+                                <span><strong>2 days a week refill (Tues, Sat):</strong> Delivery of POM medications to collection lockers</span>
                             </div>
                         </div>
                     </div>
@@ -787,6 +800,8 @@
         </div>
     </div>
 
+
+
     <!-- 24/7 Telepharmacy Modal -->
     <div id="modal-telepharmacy" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal-backdrop">
         <div class="modal-content bg-white rounded-2xl max-w-2xl mx-4 p-8 max-h-[80vh] overflow-y-auto custom-scrollbar">
@@ -804,6 +819,28 @@
             <div class="prose prose-sm max-w-none text-text-secondary">
                 <p>
                     The telepharmacy service operates continuously, enabling round-the-clock purchase of GSL and P medications and collection of POM medications from secure lockers adjacent to the vending machine. For all P and POM items, real-time pharmacist counselling is conducted via an on-screen interface to verify suitability and authorise dispensing. This ensures patients can access regulated medications safely at any time without being constrained by pharmacy operating hours.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medications Sale Modal-->
+    <div id="modal-medications-sale" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal-backdrop">
+        <div class="modal-content bg-white rounded-2xl max-w-2xl mx-4 p-8 max-h-[80vh] overflow-y-auto custom-scrollbar">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-2">Medications Sale</h3>
+                    <div class="w-16 h-1 bg-primary-red"></div>
+                </div>
+                <button onclick="closeModal('modal-medications-sale')" class="text-text-muted hover:text-text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="prose prose-sm max-w-none text-text-secondary">
+                <p>
+                    VendoPharmacy provides 24/7, pharmacist-supported access to essential medicines through a smart vending and locker system. Patients can purchase General Sales List (GSL) and Pharmacy-Only (P) medications directly from the machine, while Prescription-Only Medicines (POM) are dispensed only through secure, pharmacist-controlled lockers attached to the unit after the required checks. This tiered approach keeps the service HSA-aligned and safe, while making it easier for patients to access the right medicines based on their needs and prescription requirements.
                 </p>
             </div>
         </div>
@@ -953,7 +990,7 @@
                 </button>
             </div>
             <div class="prose prose-sm max-w-none text-text-secondary">
-                <p>Machines are equipped with automated temperature and humidity controls, secure access, and routine monitoring to ensure medication quality and comply with HSA regulatory guidelines. Environmental conditions are monitored 24 hours a day, targeting storage at 20–25°C, with alerts triggered if deviations exceed ± 2°C.</p>
+                <p>Machines are equipped with automated temperature and humidity controls, secure access, and routine monitoring to ensure medication quality and comply with HSA regulatory guidelines. Environmental conditions are monitored 24 hours a day, targeting storage at 20–25°C, with alerts triggered if deviations exceed ± 2°C.[4]</p>
             </div>
         </div>
     </div>
